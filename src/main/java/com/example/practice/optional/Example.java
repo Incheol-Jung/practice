@@ -82,10 +82,10 @@ public class Example {
                        .or(() -> Optional.ofNullable(notEmptyAddress))
                        .or(() -> Optional.ofNullable(notEmptyAddress2));
 
-        return Optional.ofNullable(address)
-                       .filter(a -> a.getStreet().contains("seoul"))
-                       .or(() -> Optional.ofNullable(notEmptyAddress2))
-                       .or(() -> Optional.ofNullable(notEmptyAddress));
+//        return Optional.ofNullable(address)
+//                       .filter(a -> a.getStreet().contains("seoul"))
+//                       .or(() -> Optional.ofNullable(notEmptyAddress2))
+//                       .or(() -> Optional.ofNullable(notEmptyAddress));
     }
 
     private String printTest(){
