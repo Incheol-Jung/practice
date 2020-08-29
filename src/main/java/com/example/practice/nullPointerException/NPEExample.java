@@ -1,4 +1,4 @@
-package com.example.practice.npe;
+package com.example.practice.nullPointerException;
 
 
 import org.apache.commons.lang3.StringUtils;
