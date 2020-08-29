@@ -63,15 +63,46 @@ public class Example {
                        .orElse(printTest());
     }
 
+    public String orElseThrowTest() throws Exception {
+        City city = new City("pusan");
+        return Optional.ofNullable(city)
+                       .map(City::getName)
+                       .orElseThrow(Exception::new);
+    }
+
+    public Optional<Address> orTest() throws Exception {
+        City city = new City();
+        Address address = city.getAddress();
+        Address notEmptyAddress = new Address("seongnam");
+        Address notEmptyAddress2 = new Address("daegue");
+
+        return Optional.ofNullable(address)
+                       .filter(a -> a.getStreet().contains("seoul"))
+                       .or(Optional::empty)
+                       .or(() -> Optional.ofNullable(notEmptyAddress))
+                       .or(() -> Optional.ofNullable(notEmptyAddress2));
+
+        return Optional.ofNullable(address)
+                       .filter(a -> a.getStreet().contains("seoul"))
+                       .or(() -> Optional.ofNullable(notEmptyAddress2))
+                       .or(() -> Optional.ofNullable(notEmptyAddress));
+    }
+
     private String printTest(){
         System.out.println("print test !!!!!!!!!");
         return "incheol";
     }
 
-    public static void main(String[] args) {
+    public void ifPresentTest(){
+        City city = new City("seoul");
+        Optional.ofNullable(city).ifPresent(i -> System.out.println(i.getName()));
+    }
+
+    public static void main(String[] args) throws Exception {
         Example example = new Example();
 
-        System.out.println("orElseGetTest -> " + example.orElseGetTest());
-        System.out.println("orElseTest -> " + example.orElseTest());
+//        System.out.println("orElseGetTest -> " + example.orElseGetTest());
+//        System.out.println("orElseTest -> " + example.orElseTest());
+        example.orTest().ifPresent((value) -> System.out.println(value.getStreet()));
     }
 }
