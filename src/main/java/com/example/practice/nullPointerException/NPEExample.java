@@ -72,45 +72,45 @@ public class NPEExample {
         }
     }
 
-    public static void main(String[] args) {
-        NPEExample example = new NPEExample();
-        // case 1. @NonNull 사용
-//        example.arithmeticException(null);
-
-        // case 2. @NotNull 사용(확인 필요)
-//        example.dtoNullCheck(new DtoTemp(null));
-
-        // case 3. equals 순서 변경
-//        System.out.println(example.euqlasTest(null));
-
-        // case 4. toString -> valueOf 사용
-//        System.out.println(example.valueOfTest(null));
-
-        // case 5. null 체크, 또는 StringUtils 사용
-//        example.nullCheckString(null);
-
-        // case 6. optional 사용
-        // Optional.of(T)
-        // - T로 받은 non-null 값을 포함하는 Optional 객체 반환, T가 null 일 경우 NPE 발생
-        // Optional.absent()
-        // - 아무것도 포함하고 있지 않는 absent Optional 객체 반환
-        // Optional.fromNullable(T)
-        // - T로 받은 값이 non-null일 경우 present로, null일 경우 absent로 처리한 Optional 객체 반환
-//        String tempString = null;
-//        Optional<String> optionalString = Optional.ofNullable(tempString);
-//        example.optionalTest(optionalString);
-
-        // case 7. try / catch 사용
-//        example.tryCatchTest(null);
-
-        // case 8. method chainging 피하기
-//        exmaple.getPerson().getAge().getYear();
-
-        // case 9. List는 null 보다는 초기화 또는 emptyList
-        List<Integer> items = null;
-        items = new ArrayList<Integer>();
-        items = Collections.emptyList();
-    }
+//    public static void main(String[] args) {
+//        NPEExample example = new NPEExample();
+//        // case 1. @NonNull 사용
+////        example.arithmeticException(null);
+//
+//        // case 2. @NotNull 사용(확인 필요)
+////        example.dtoNullCheck(new DtoTemp(null));
+//
+//        // case 3. equals 순서 변경
+////        System.out.println(example.euqlasTest(null));
+//
+//        // case 4. toString -> valueOf 사용
+////        System.out.println(example.valueOfTest(null));
+//
+//        // case 5. null 체크, 또는 StringUtils 사용
+////        example.nullCheckString(null);
+//
+//        // case 6. optional 사용
+//        // Optional.of(T)
+//        // - T로 받은 non-null 값을 포함하는 Optional 객체 반환, T가 null 일 경우 NPE 발생
+//        // Optional.absent()
+//        // - 아무것도 포함하고 있지 않는 absent Optional 객체 반환
+//        // Optional.fromNullable(T)
+//        // - T로 받은 값이 non-null일 경우 present로, null일 경우 absent로 처리한 Optional 객체 반환
+////        String tempString = null;
+////        Optional<String> optionalString = Optional.ofNullable(tempString);
+////        example.optionalTest(optionalString);
+//
+//        // case 7. try / catch 사용
+////        example.tryCatchTest(null);
+//
+//        // case 8. method chainging 피하기
+////        exmaple.getPerson().getAge().getYear();
+//
+//        // case 9. List는 null 보다는 초기화 또는 emptyList
+//        List<Integer> items = null;
+//        items = new ArrayList<Integer>();
+//        items = Collections.emptyList();
+//    }
 
 
 }

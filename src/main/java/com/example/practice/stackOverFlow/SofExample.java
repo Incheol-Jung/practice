@@ -47,20 +47,20 @@ public class SofExample {
         return number == 0 ? 1 : number * calculateFactorial(number - 1);
     }
 
-    public static void main(String[] args) {
-        SofExample example = new SofExample();
-
-        // case 1. 재귀함수
-//        long result = example.calculateFactorial(100);
-//        System.out.println(result);
-
-        // case 2. 상호 참조 생성
-//        ClassOne one = new ClassOne();
-
-        // case 3. 본인 참조 생성
-//        AccountHolder holder = new AccountHolder();
-
-        // case 4. 정적 배열 사이즈 크게 잡기
-        int[] arr = new int[1000000000];
-    }
+//    public static void main(String[] args) {
+//        SofExample example = new SofExample();
+//
+//        // case 1. 재귀함수
+////        long result = example.calculateFactorial(100);
+////        System.out.println(result);
+//
+//        // case 2. 상호 참조 생성
+////        ClassOne one = new ClassOne();
+//
+//        // case 3. 본인 참조 생성
+////        AccountHolder holder = new AccountHolder();
+//
+//        // case 4. 정적 배열 사이즈 크게 잡기
+//        int[] arr = new int[1000000000];
+//    }
 }
