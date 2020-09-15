@@ -4,8 +4,9 @@ package com.example.practice.string;
  * @author Incheol Jung
  */
 public class StringTest {
-
     public static void main(String[] args) {
+        StringBuilder test = new StringBuilder("test");
+        StringBuffer test2 = new StringBuffer("test");
         String str1 = "test";
         String str2 = "test";
         String str3 = str1 + str2;
