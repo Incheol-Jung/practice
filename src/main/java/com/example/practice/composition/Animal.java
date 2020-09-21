@@ -15,7 +15,11 @@ public class Animal {
         System.out.println("run with legs");
     }
 
-    public void move(){
+    protected void move(){
         this.run();
+    }
+
+    public void go(){
+        this.move();
     }
 }

@@ -14,7 +14,7 @@ public class Bird extends Animal {
         System.out.println("fly with wings");
     }
 
-    public void move(){
+    protected void move(){
         this.fly();
     }
 
