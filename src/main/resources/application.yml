@@ -1,5 +1,7 @@
 spring:
   mvc:
     view:
-      prefix: /WEB-INF/views/stadmin/
+      prefix: /WEB-INF/jsp/
       suffix: .jsp
+server:
+  port: 8080

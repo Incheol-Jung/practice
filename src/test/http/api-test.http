@@ -1,1 +1,17 @@
-http://localhost:8080/exception
+http://localhost:8080/person/exception
+
+###
+http://localhost:8080/person/exception2
+
+###
+POST http://localhost:8080/person
+Content-Type: application/json
+
+{
+    "id":1,
+    "name":"incheol",
+    "registerDate":"2020-09-10"
+}
+
+###
+http://localhost:8080/person/register?id=1&name=incheol&registerDate=2020-09-10
