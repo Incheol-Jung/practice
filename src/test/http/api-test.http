@@ -4,6 +4,12 @@ http://localhost:8080/person/exception
 http://localhost:8080/person/exception2
 
 ###
+http://localhost:8080/school/exception2
+
+###
+http://localhost:8080/person/exception2
+
+###
 POST http://localhost:8080/person
 Content-Type: application/json
 
