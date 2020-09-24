@@ -77,10 +77,10 @@ public class Example {
         Address notEmptyAddress2 = new Address("daegue");
 
         return Optional.ofNullable(address)
-                       .filter(a -> a.getStreet().contains("seoul"))
-                       .or(Optional::empty)
-                       .or(() -> Optional.ofNullable(notEmptyAddress))
-                       .or(() -> Optional.ofNullable(notEmptyAddress2));
+                       .filter(a -> a.getStreet().contains("seoul"));
+//                       .or(Optional::empty)
+//                       .or(() -> Optional.ofNullable(notEmptyAddress))
+//                       .or(() -> Optional.ofNullable(notEmptyAddress2));
 
 //        return Optional.ofNullable(address)
 //                       .filter(a -> a.getStreet().contains("seoul"))

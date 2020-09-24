@@ -6,21 +6,21 @@ package com.example.practice.stackOverFlow;
 public class SofExample {
 
     public static class ClassOne {
+
         private int oneValue;
         private ClassTwo clsTwoInstance = null;
 
         public ClassOne() {
             oneValue = 0;
-            clsTwoInstance = new ClassTwo();
         }
 
-        public ClassOne(int oneValue, ClassTwo clsTwoInstance) {
-            this.oneValue = oneValue;
-            this.clsTwoInstance = clsTwoInstance;
+        public void getClassTwo(ClassTwo classTwo) {
+            this.clsTwoInstance = classTwo;
         }
     }
 
     public static class ClassTwo {
+
         private int twoValue;
         private ClassOne clsOneInstance = null;
 
@@ -29,38 +29,42 @@ public class SofExample {
             clsOneInstance = new ClassOne();
         }
 
-        public ClassTwo(int twoValue, ClassOne clsOneInstance) {
-            this.twoValue = twoValue;
-            this.clsOneInstance = clsOneInstance;
+        public void getClassOne(ClassOne classOne) {
+            this.clsOneInstance = classOne;
         }
     }
 
     public static class AccountHolder {
+
         private String firstName;
         private String lastName;
 
         AccountHolder jointAccountHolder = new AccountHolder();
     }
 
-
     public long calculateFactorial(long number) {
-        return number == 0 ? 1 : number * calculateFactorial(number - 1);
+        return number == 1 ? 1 : number * calculateFactorial(number - 1);
     }
 
-//    public static void main(String[] args) {
-//        SofExample example = new SofExample();
-//
-//        // case 1. 재귀함수
-////        long result = example.calculateFactorial(100);
-////        System.out.println(result);
-//
-//        // case 2. 상호 참조 생성
-////        ClassOne one = new ClassOne();
-//
-//        // case 3. 본인 참조 생성
-////        AccountHolder holder = new AccountHolder();
-//
-//        // case 4. 정적 배열 사이즈 크게 잡기
-//        int[] arr = new int[1000000000];
-//    }
+    public long calculateTailFactorial(long number, long sum) {
+        return number == 1 ? sum : calculateTailFactorial(number - 1, number * sum);
+    }
+
+    public static void main(String[] args) {
+        SofExample example = new SofExample();
+
+        // case 1. 재귀함수
+        //        long result = example.calculateFactorial(10600);
+        // case 1. 재귀함수 해결방법
+        //        long result2 = example.calculateTailFactorial(10600,1);
+
+        // case 2. 상호 참조 생성
+        //        ClassOne one = new ClassOne();
+
+        // case 3. 본인 참조 생성
+//        AccountHolder holder = new AccountHolder();
+
+        // case 4. 정적 배열 사이즈 크게 잡기
+        int[] arr = new int[1000000000];
+    }
 }
