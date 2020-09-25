@@ -3,5 +3,10 @@ spring:
     view:
       prefix: /WEB-INF/jsp/
       suffix: .jsp
+  task:
+    execution:
+      pool:
+        core-size: 10
+        max-size: 10
 server:
   port: 8080

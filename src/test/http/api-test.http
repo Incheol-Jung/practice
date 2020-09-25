@@ -21,3 +21,15 @@ Content-Type: application/json
 
 ###
 http://localhost:8080/person/register?id=1&name=incheol&registerDate=2020-09-10
+
+###
+
+GET http://localhost:8080/block/sync-block
+
+###
+
+GET http://localhost:8080/block/async-block
+
+###
+
+GET http://localhost:8080/block/sync-nonblock
