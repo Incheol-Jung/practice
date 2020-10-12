@@ -1,4 +1,6 @@
 spring:
+  jpa:
+    open-in-view: true
   mvc:
     view:
       prefix: /WEB-INF/jsp/
@@ -8,5 +10,7 @@ spring:
       pool:
         core-size: 10
         max-size: 10
+
+
 server:
   port: 8080

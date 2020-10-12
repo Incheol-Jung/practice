@@ -15,8 +15,8 @@ import java.text.SimpleDateFormat;
  * @author Incheol Jung
  */
 @Controller
-@RequestMapping("/person")
-public class PersonController {
+@RequestMapping("/person2")
+public class PersonsController {
 
     @InitBinder
     public void InitBinder(WebDataBinder dataBinder) {
