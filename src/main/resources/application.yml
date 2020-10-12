@@ -10,6 +10,8 @@ spring:
       pool:
         core-size: 10
         max-size: 10
+  datasource:
+    password: 1234
 
 
 server:

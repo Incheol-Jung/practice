@@ -18,9 +18,15 @@ public class PersonController {
     @GetMapping
     public String get(){
         Person person = personService.get(1);
-        Team team = person.getTeam();
-        System.out.println(team.getName());
+        person.setName("steve");
+        Person person2 = personService.get(1);
         return "person";
+    }
+
+    @GetMapping("update")
+    public String get2(){
+        Person person = personService.get(1);
+        return person.getName();
     }
 
     @PostMapping
