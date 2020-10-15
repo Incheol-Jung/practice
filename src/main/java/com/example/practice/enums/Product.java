@@ -24,6 +24,6 @@ public class Product {
 
     private String name;
 
-    @Enumerated(EnumType.STRING)
+    @Convert(converter = EnumConverter.class)
     private Category category;
 }

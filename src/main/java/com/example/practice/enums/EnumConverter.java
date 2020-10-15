@@ -6,10 +6,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.persistence.AttributeConverter;
+import javax.persistence.Converter;
 
 /**
  * @author Incheol Jung
  */
+@Converter
 public class EnumConverter implements AttributeConverter<Category, String> {
     private static Logger log = LoggerFactory.getLogger(EnumConverter.class);
 
