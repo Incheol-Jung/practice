@@ -8,7 +8,7 @@ public class StaticTest {
     private static String name = "";
 
     static {
-        System.out.println(this.count);
+//        System.out.println(this.count);
         name = "incheol";
         System.out.println("static block!!!!");
     }
